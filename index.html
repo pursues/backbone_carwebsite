@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+</head>
+<body>
+
+<!-- 定义容器元素 -->
+<div id="app">
+	<!-- 定义列表页面 -->
+	<section id="list" class="list">
+		<header>
+			<div class="go-back">
+				<span class="arrow"></span>
+				<span class="green-arrow"></span>
+			</div>
+			<div class="login">登录</div>
+			<h1>相册收集</h1>
+		</header>
+		<div class="search">
+			<input type="text" placeholder="搜索你想要的图片">
+			<span>搜一搜</span>
+		</div>
+		<ul class="nav clearfix">
+			<li data-id="0" class="item-0">摄影</li>
+			<li data-id="1" class="item-1">名车</li>
+			<li data-id="2" class="item-2">星空</li>
+			<li data-id="3" class="item-3">宠物</li>
+			<li data-id="4" class="item-4">风景</li>
+			<li data-id="5" class="item-5">建筑</li>
+			<li data-id="6" class="item-6">名表</li>
+			<li data-id="7" class="item-7">美女</li>
+		</ul>
+		<div class="container">
+			<div class="left-container"></div>
+			<div class="right-container"></div>
+		</div>
+		<div class="go-top">返回顶部</div>
+	</section>
+	<!-- 定义大图页面 -->
+	<section class="layer" id="layer"></section>
+	<!-- 定义登录页面 -->
+	<!-- <section class="logins" id="logins"></section> -->
+</div>
+<script type="text/template" id="tpl_layer">
+	<div class="container" style="<%=style%>" >
+		<img src="<%=src%>">
+	</div>
+	<header class="go-back"><span class="arrow"><span class="green-arrow"></span></span>
+	<h1><%=title%></h1>
+	</header>
+</script>
+<!-- <script type="text/javascript" src="js/lib/require.js" data-main='js/app.js'></script> -->
+<script type="text/javascript" src="sea.js"></script>
+<script type="text/javascript" src="lib/seajs-css.js"></script>
+<script type="text/javascript" src="lib/zepto.js"></script>
+<script type="text/javascript" src="lib/zepto.touch.js"></script>
+<script type="text/javascript" src="lib/underscore.js"></script>
+<script type="text/javascript" src="lib/backbone.js"></script>
+<script type="text/javascript">
+// 引入入口文件
+seajs.use('app')
+</script>
+</body>
+</html>
